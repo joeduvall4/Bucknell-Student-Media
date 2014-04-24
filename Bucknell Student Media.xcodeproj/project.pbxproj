@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8C3D0D0190183F3003D280F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0CF190183F3003D280F /* Foundation.framework */; };
+		D8C3D0D2190183F3003D280F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D1190183F3003D280F /* CoreGraphics.framework */; };
+		D8C3D0D4190183F3003D280F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D3190183F3003D280F /* UIKit.framework */; };
+		D8C3D0DA190183F3003D280F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D0D8190183F3003D280F /* InfoPlist.strings */; };
+		D8C3D0DC190183F3003D280F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3D0DB190183F3003D280F /* main.m */; };
+		D8C3D0E0190183F3003D280F /* BSMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3D0DF190183F3003D280F /* BSMAppDelegate.m */; };
+		D8C3D0E3190183F3003D280F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D0E1190183F3003D280F /* Main_iPhone.storyboard */; };
+		D8C3D0E6190183F3003D280F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D0E4190183F3003D280F /* Main_iPad.storyboard */; };
+		D8C3D0E9190183F3003D280F /* BSMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3D0E8190183F3003D280F /* BSMFirstViewController.m */; };
+		D8C3D0EC190183F3003D280F /* BSMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3D0EB190183F3003D280F /* BSMSecondViewController.m */; };
+		D8C3D0EE190183F3003D280F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D0ED190183F3003D280F /* Images.xcassets */; };
+		D8C3D0F5190183F3003D280F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0F4190183F3003D280F /* XCTest.framework */; };
+		D8C3D0F6190183F3003D280F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0CF190183F3003D280F /* Foundation.framework */; };
+		D8C3D0F7190183F3003D280F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D3190183F3003D280F /* UIKit.framework */; };
+		D8C3D0FF190183F3003D280F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D0FD190183F3003D280F /* InfoPlist.strings */; };
+		D8C3D101190183F3003D280F /* Bucknell_Student_MediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3D100190183F3003D280F /* Bucknell_Student_MediaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8C3D0F8190183F3003D280F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8C3D0C4190183F3003D280F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8C3D0CB190183F3003D280F;
+			remoteInfo = "Bucknell Student Media";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8C3D0CC190183F3003D280F /* Bucknell Student Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bucknell Student Media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C3D0CF190183F3003D280F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D8C3D0D1190183F3003D280F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D8C3D0D3190183F3003D280F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D8C3D0D7190183F3003D280F /* Bucknell Student Media-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bucknell Student Media-Info.plist"; sourceTree = "<group>"; };
+		D8C3D0D9190183F3003D280F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8C3D0DB190183F3003D280F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8C3D0DD190183F3003D280F /* Bucknell Student Media-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bucknell Student Media-Prefix.pch"; sourceTree = "<group>"; };
+		D8C3D0DE190183F3003D280F /* BSMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSMAppDelegate.h; sourceTree = "<group>"; };
+		D8C3D0DF190183F3003D280F /* BSMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSMAppDelegate.m; sourceTree = "<group>"; };
+		D8C3D0E2190183F3003D280F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		D8C3D0E5190183F3003D280F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		D8C3D0E7190183F3003D280F /* BSMFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSMFirstViewController.h; sourceTree = "<group>"; };
+		D8C3D0E8190183F3003D280F /* BSMFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSMFirstViewController.m; sourceTree = "<group>"; };
+		D8C3D0EA190183F3003D280F /* BSMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSMSecondViewController.h; sourceTree = "<group>"; };
+		D8C3D0EB190183F3003D280F /* BSMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSMSecondViewController.m; sourceTree = "<group>"; };
+		D8C3D0ED190183F3003D280F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D8C3D0F3190183F3003D280F /* Bucknell Student MediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bucknell Student MediaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C3D0F4190183F3003D280F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D8C3D0FC190183F3003D280F /* Bucknell Student MediaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bucknell Student MediaTests-Info.plist"; sourceTree = "<group>"; };
+		D8C3D0FE190183F3003D280F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8C3D100190183F3003D280F /* Bucknell_Student_MediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bucknell_Student_MediaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8C3D0C9190183F3003D280F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C3D0D2190183F3003D280F /* CoreGraphics.framework in Frameworks */,
+				D8C3D0D4190183F3003D280F /* UIKit.framework in Frameworks */,
+				D8C3D0D0190183F3003D280F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8C3D0F0190183F3003D280F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C3D0F5190183F3003D280F /* XCTest.framework in Frameworks */,
+				D8C3D0F7190183F3003D280F /* UIKit.framework in Frameworks */,
+				D8C3D0F6190183F3003D280F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8C3D0C3190183F3003D280F = {
+			isa = PBXGroup;
+			children = (
+				D8C3D0D5190183F3003D280F /* Bucknell Student Media */,
+				D8C3D0FA190183F3003D280F /* Bucknell Student MediaTests */,
+				D8C3D0CE190183F3003D280F /* Frameworks */,
+				D8C3D0CD190183F3003D280F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8C3D0CD190183F3003D280F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3D0CC190183F3003D280F /* Bucknell Student Media.app */,
+				D8C3D0F3190183F3003D280F /* Bucknell Student MediaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8C3D0CE190183F3003D280F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3D0CF190183F3003D280F /* Foundation.framework */,
+				D8C3D0D1190183F3003D280F /* CoreGraphics.framework */,
+				D8C3D0D3190183F3003D280F /* UIKit.framework */,
+				D8C3D0F4190183F3003D280F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8C3D0D5190183F3003D280F /* Bucknell Student Media */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3D0DE190183F3003D280F /* BSMAppDelegate.h */,
+				D8C3D0DF190183F3003D280F /* BSMAppDelegate.m */,
+				D8C3D0E1190183F3003D280F /* Main_iPhone.storyboard */,
+				D8C3D0E4190183F3003D280F /* Main_iPad.storyboard */,
+				D8C3D0E7190183F3003D280F /* BSMFirstViewController.h */,
+				D8C3D0E8190183F3003D280F /* BSMFirstViewController.m */,
+				D8C3D0EA190183F3003D280F /* BSMSecondViewController.h */,
+				D8C3D0EB190183F3003D280F /* BSMSecondViewController.m */,
+				D8C3D0ED190183F3003D280F /* Images.xcassets */,
+				D8C3D0D6190183F3003D280F /* Supporting Files */,
+			);
+			path = "Bucknell Student Media";
+			sourceTree = "<group>";
+		};
+		D8C3D0D6190183F3003D280F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3D0D7190183F3003D280F /* Bucknell Student Media-Info.plist */,
+				D8C3D0D8190183F3003D280F /* InfoPlist.strings */,
+				D8C3D0DB190183F3003D280F /* main.m */,
+				D8C3D0DD190183F3003D280F /* Bucknell Student Media-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8C3D0FA190183F3003D280F /* Bucknell Student MediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3D100190183F3003D280F /* Bucknell_Student_MediaTests.m */,
+				D8C3D0FB190183F3003D280F /* Supporting Files */,
+			);
+			path = "Bucknell Student MediaTests";
+			sourceTree = "<group>";
+		};
+		D8C3D0FB190183F3003D280F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3D0FC190183F3003D280F /* Bucknell Student MediaTests-Info.plist */,
+				D8C3D0FD190183F3003D280F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8C3D0CB190183F3003D280F /* Bucknell Student Media */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8C3D104190183F3003D280F /* Build configuration list for PBXNativeTarget "Bucknell Student Media" */;
+			buildPhases = (
+				D8C3D0C8190183F3003D280F /* Sources */,
+				D8C3D0C9190183F3003D280F /* Frameworks */,
+				D8C3D0CA190183F3003D280F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bucknell Student Media";
+			productName = "Bucknell Student Media";
+			productReference = D8C3D0CC190183F3003D280F /* Bucknell Student Media.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8C3D0F2190183F3003D280F /* Bucknell Student MediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8C3D107190183F3003D280F /* Build configuration list for PBXNativeTarget "Bucknell Student MediaTests" */;
+			buildPhases = (
+				D8C3D0EF190183F3003D280F /* Sources */,
+				D8C3D0F0190183F3003D280F /* Frameworks */,
+				D8C3D0F1190183F3003D280F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8C3D0F9190183F3003D280F /* PBXTargetDependency */,
+			);
+			name = "Bucknell Student MediaTests";
+			productName = "Bucknell Student MediaTests";
+			productReference = D8C3D0F3190183F3003D280F /* Bucknell Student MediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8C3D0C4190183F3003D280F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BSM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joseph Duvall";
+				TargetAttributes = {
+					D8C3D0F2190183F3003D280F = {
+						TestTargetID = D8C3D0CB190183F3003D280F;
+					};
+				};
+			};
+			buildConfigurationList = D8C3D0C7190183F3003D280F /* Build configuration list for PBXProject "Bucknell Student Media" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8C3D0C3190183F3003D280F;
+			productRefGroup = D8C3D0CD190183F3003D280F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8C3D0CB190183F3003D280F /* Bucknell Student Media */,
+				D8C3D0F2190183F3003D280F /* Bucknell Student MediaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8C3D0CA190183F3003D280F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C3D0E6190183F3003D280F /* Main_iPad.storyboard in Resources */,
+				D8C3D0EE190183F3003D280F /* Images.xcassets in Resources */,
+				D8C3D0E3190183F3003D280F /* Main_iPhone.storyboard in Resources */,
+				D8C3D0DA190183F3003D280F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8C3D0F1190183F3003D280F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C3D0FF190183F3003D280F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8C3D0C8190183F3003D280F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C3D0DC190183F3003D280F /* main.m in Sources */,
+				D8C3D0EC190183F3003D280F /* BSMSecondViewController.m in Sources */,
+				D8C3D0E0190183F3003D280F /* BSMAppDelegate.m in Sources */,
+				D8C3D0E9190183F3003D280F /* BSMFirstViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8C3D0EF190183F3003D280F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C3D101190183F3003D280F /* Bucknell_Student_MediaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8C3D0F9190183F3003D280F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8C3D0CB190183F3003D280F /* Bucknell Student Media */;
+			targetProxy = D8C3D0F8190183F3003D280F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8C3D0D8190183F3003D280F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8C3D0D9190183F3003D280F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D8C3D0E1190183F3003D280F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8C3D0E2190183F3003D280F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D8C3D0E4190183F3003D280F /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8C3D0E5190183F3003D280F /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		D8C3D0FD190183F3003D280F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8C3D0FE190183F3003D280F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8C3D102190183F3003D280F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8C3D103190183F3003D280F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8C3D105190183F3003D280F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bucknell Student Media/Bucknell Student Media-Prefix.pch";
+				INFOPLIST_FILE = "Bucknell Student Media/Bucknell Student Media-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D8C3D106190183F3003D280F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bucknell Student Media/Bucknell Student Media-Prefix.pch";
+				INFOPLIST_FILE = "Bucknell Student Media/Bucknell Student Media-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D8C3D108190183F3003D280F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bucknell Student Media.app/Bucknell Student Media";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bucknell Student Media/Bucknell Student Media-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Bucknell Student MediaTests/Bucknell Student MediaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D8C3D109190183F3003D280F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bucknell Student Media.app/Bucknell Student Media";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bucknell Student Media/Bucknell Student Media-Prefix.pch";
+				INFOPLIST_FILE = "Bucknell Student MediaTests/Bucknell Student MediaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8C3D0C7190183F3003D280F /* Build configuration list for PBXProject "Bucknell Student Media" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C3D102190183F3003D280F /* Debug */,
+				D8C3D103190183F3003D280F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8C3D104190183F3003D280F /* Build configuration list for PBXNativeTarget "Bucknell Student Media" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C3D105190183F3003D280F /* Debug */,
+				D8C3D106190183F3003D280F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D8C3D107190183F3003D280F /* Build configuration list for PBXNativeTarget "Bucknell Student MediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C3D108190183F3003D280F /* Debug */,
+				D8C3D109190183F3003D280F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8C3D0C4190183F3003D280F /* Project object */;
+}
