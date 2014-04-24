@@ -1,4 +1,6 @@
 Bucknell-Student-Media
 ======================
 
-iOS Version of Bucknell Student Media Reader.
+This is the iOS Version of Bucknell Student Media Reader.
+
+Created by Joseph Duvall, '16 at Bucknell University for csci379. 
