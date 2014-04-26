@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D82C361C190AC77500049311 /* Acknowledgements.rtf */; };
+		D8AEC9CC190AC494006D5BE2 /* Acknowledgements.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */; };
+		D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */; };
 		D8C3D0D0190183F3003D280F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0CF190183F3003D280F /* Foundation.framework */; };
 		D8C3D0D2190183F3003D280F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D1190183F3003D280F /* CoreGraphics.framework */; };
 		D8C3D0D4190183F3003D280F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D3190183F3003D280F /* UIKit.framework */; };
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D82C361C190AC77500049311 /* Acknowledgements.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Acknowledgements.rtf; sourceTree = "<group>"; };
+		D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Acknowledgements.txt; sourceTree = "<group>"; };
+		D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsAboutViewController.h; sourceTree = "<group>"; };
+		D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsAboutViewController.m; sourceTree = "<group>"; };
 		D8C3D0CC190183F3003D280F /* Bucknell Student Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bucknell Student Media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C3D0CF190183F3003D280F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8C3D0D1190183F3003D280F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,12 +127,16 @@
 				D8C3D0DE190183F3003D280F /* BSMAppDelegate.h */,
 				D8C3D0DF190183F3003D280F /* BSMAppDelegate.m */,
 				D8C3D0E1190183F3003D280F /* Main_iPhone.storyboard */,
+				D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */,
+				D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */,
 				D8C3D0E4190183F3003D280F /* Main_iPad.storyboard */,
 				D8C3D0E7190183F3003D280F /* BSMFirstViewController.h */,
 				D8C3D0E8190183F3003D280F /* BSMFirstViewController.m */,
 				D8C3D0EA190183F3003D280F /* BSMSecondViewController.h */,
 				D8C3D0EB190183F3003D280F /* BSMSecondViewController.m */,
 				D8C3D0ED190183F3003D280F /* Images.xcassets */,
+				D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */,
+				D82C361C190AC77500049311 /* Acknowledgements.rtf */,
 				D8C3D0D6190183F3003D280F /* Supporting Files */,
 			);
 			path = "Bucknell Student Media";
@@ -240,6 +251,8 @@
 				D8C3D0E6190183F3003D280F /* Main_iPad.storyboard in Resources */,
 				D8C3D0EE190183F3003D280F /* Images.xcassets in Resources */,
 				D8C3D0E3190183F3003D280F /* Main_iPhone.storyboard in Resources */,
+				D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */,
+				D8AEC9CC190AC494006D5BE2 /* Acknowledgements.txt in Resources */,
 				D8C3D0DA190183F3003D280F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +276,7 @@
 				D8C3D0EC190183F3003D280F /* BSMSecondViewController.m in Sources */,
 				D8C3D0E0190183F3003D280F /* BSMAppDelegate.m in Sources */,
 				D8C3D0E9190183F3003D280F /* BSMFirstViewController.m in Sources */,
+				D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +491,7 @@
 				D8C3D106190183F3003D280F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8C3D107190183F3003D280F /* Build configuration list for PBXNativeTarget "Bucknell Student MediaTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +500,7 @@
 				D8C3D109190183F3003D280F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

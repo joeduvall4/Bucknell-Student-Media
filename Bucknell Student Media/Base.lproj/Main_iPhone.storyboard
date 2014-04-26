@@ -280,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="1721" y="1032"/>
         </scene>
-        <!--View Controller - About-->
+        <!--Settings About View Controller - About-->
         <scene sceneID="lj8-3G-8kX">
             <objects>
-                <viewController id="QVK-vB-YBr" sceneMemberID="viewController">
+                <viewController id="QVK-vB-YBr" customClass="BSMSettingsAboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jtv-iJ-BWA"/>
                         <viewControllerLayoutGuide type="bottom" id="2v2-GI-AfI"/>
@@ -292,22 +292,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-CN-AQA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="388"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-CN-AQA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Created by Joe Duvall in May 2014 at Bucknell University for csci379. 
-
-Special thanks to Pixeden LLC for their Tab Bar Icons iOS 7 series.
-
-A Bucknell Open Source Community Project.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="h6V-Y7-Ww4"/>
+                    <connections>
+                        <outlet property="aboutTextView" destination="lZs-CN-AQA" id="Zc0-5b-Hro"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuZ-vW-g73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
