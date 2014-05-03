@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - The Bucknellian-->
+        <!--Bucknellian View Controller - The Bucknellian-->
         <scene sceneID="car-WZ-o25">
             <objects>
-                <viewController id="HNY-kp-xwz" sceneMemberID="viewController">
+                <viewController id="HNY-kp-xwz" customClass="BSMBucknellianViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GfO-bq-vp6"/>
                         <viewControllerLayoutGuide type="bottom" id="S6j-oT-8Wl"/>
@@ -82,7 +82,7 @@
         <!--View Controller - WVBU-->
         <scene sceneID="wid-aW-YMq">
             <objects>
-                <viewController id="PKm-6q-Qk7" sceneMemberID="viewController">
+                <viewController id="PKm-6q-Qk7" customClass="BSMWVBUViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LPm-pa-fXs"/>
                         <viewControllerLayoutGuide type="bottom" id="2Q1-7j-b49"/>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="653" y="1307"/>
         </scene>
-        <!--Table View Controller - Settings-->
+        <!--Settings Table View Controller - Settings-->
         <scene sceneID="TcC-ER-8tV">
             <objects>
-                <tableViewController id="CHZ-qc-tHi" sceneMemberID="viewController">
+                <tableViewController id="CHZ-qc-tHi" customClass="BSMSettingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="o23-Gl-QoQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

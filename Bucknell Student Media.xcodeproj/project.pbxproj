@@ -10,6 +10,10 @@
 		D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D82C361C190AC77500049311 /* Acknowledgements.rtf */; };
 		D8AEC9CC190AC494006D5BE2 /* Acknowledgements.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */; };
 		D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */; };
+		D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E019148BB500751628 /* BSMBucknellianViewController.m */; };
+		D8C236E419148BF700751628 /* BSMUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E319148BF700751628 /* BSMUploadViewController.m */; };
+		D8C236E719148C0500751628 /* BSMWVBUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E619148C0500751628 /* BSMWVBUViewController.m */; };
+		D8C236EB19148C6D00751628 /* BSMSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236EA19148C6D00751628 /* BSMSettingsTableViewController.m */; };
 		D8C3D0D0190183F3003D280F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0CF190183F3003D280F /* Foundation.framework */; };
 		D8C3D0D2190183F3003D280F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D1190183F3003D280F /* CoreGraphics.framework */; };
 		D8C3D0D4190183F3003D280F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D3190183F3003D280F /* UIKit.framework */; };
@@ -43,6 +47,14 @@
 		D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Acknowledgements.txt; sourceTree = "<group>"; };
 		D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsAboutViewController.h; sourceTree = "<group>"; };
 		D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsAboutViewController.m; sourceTree = "<group>"; };
+		D8C236DF19148BB500751628 /* BSMBucknellianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMBucknellianViewController.h; sourceTree = "<group>"; };
+		D8C236E019148BB500751628 /* BSMBucknellianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMBucknellianViewController.m; sourceTree = "<group>"; };
+		D8C236E219148BF700751628 /* BSMUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMUploadViewController.h; sourceTree = "<group>"; };
+		D8C236E319148BF700751628 /* BSMUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMUploadViewController.m; sourceTree = "<group>"; };
+		D8C236E519148C0500751628 /* BSMWVBUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMWVBUViewController.h; sourceTree = "<group>"; };
+		D8C236E619148C0500751628 /* BSMWVBUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMWVBUViewController.m; sourceTree = "<group>"; };
+		D8C236E919148C6D00751628 /* BSMSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsTableViewController.h; sourceTree = "<group>"; };
+		D8C236EA19148C6D00751628 /* BSMSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsTableViewController.m; sourceTree = "<group>"; };
 		D8C3D0CC190183F3003D280F /* Bucknell Student Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bucknell Student Media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C3D0CF190183F3003D280F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8C3D0D1190183F3003D280F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +103,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8C236E819148C1000751628 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D8C236DF19148BB500751628 /* BSMBucknellianViewController.h */,
+				D8C236E019148BB500751628 /* BSMBucknellianViewController.m */,
+				D8C236E519148C0500751628 /* BSMWVBUViewController.h */,
+				D8C236E619148C0500751628 /* BSMWVBUViewController.m */,
+				D8C236E919148C6D00751628 /* BSMSettingsTableViewController.h */,
+				D8C236EA19148C6D00751628 /* BSMSettingsTableViewController.m */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		D8C236EC19148C7900751628 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				D8C236E219148BF700751628 /* BSMUploadViewController.h */,
+				D8C236E319148BF700751628 /* BSMUploadViewController.m */,
+				D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */,
+				D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */,
+			);
+			name = Subviews;
+			sourceTree = "<group>";
+		};
 		D8C3D0C3190183F3003D280F = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +163,8 @@
 				D8C3D0DE190183F3003D280F /* BSMAppDelegate.h */,
 				D8C3D0DF190183F3003D280F /* BSMAppDelegate.m */,
 				D8C3D0E1190183F3003D280F /* Main_iPhone.storyboard */,
-				D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */,
-				D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */,
+				D8C236E819148C1000751628 /* Tabs */,
+				D8C236EC19148C7900751628 /* Subviews */,
 				D8C3D0E4190183F3003D280F /* Main_iPad.storyboard */,
 				D8C3D0E7190183F3003D280F /* BSMFirstViewController.h */,
 				D8C3D0E8190183F3003D280F /* BSMFirstViewController.m */,
@@ -272,11 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C236E419148BF700751628 /* BSMUploadViewController.m in Sources */,
 				D8C3D0DC190183F3003D280F /* main.m in Sources */,
+				D8C236EB19148C6D00751628 /* BSMSettingsTableViewController.m in Sources */,
 				D8C3D0EC190183F3003D280F /* BSMSecondViewController.m in Sources */,
 				D8C3D0E0190183F3003D280F /* BSMAppDelegate.m in Sources */,
 				D8C3D0E9190183F3003D280F /* BSMFirstViewController.m in Sources */,
+				D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */,
 				D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */,
+				D8C236E719148C0500751628 /* BSMWVBUViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
