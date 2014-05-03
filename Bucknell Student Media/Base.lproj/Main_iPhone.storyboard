@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="653" y="1307"/>
         </scene>
-        <!--Settings Table View Controller - Settings-->
+        <!--Table View Controller - Settings-->
         <scene sceneID="TcC-ER-8tV">
             <objects>
-                <tableViewController id="CHZ-qc-tHi" customClass="BSMSettingsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="CHZ-qc-tHi" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="o23-Gl-QoQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +179,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="X5M-pb-wg0" kind="push" id="iiU-Q1-Ieb"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eBz-St-yoI" style="IBUITableViewCellStyleDefault" id="wE8-1A-X9C">
                                         <rect key="frame" x="0.0" y="152" width="320" height="44"/>
@@ -213,6 +216,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYA-jB-LQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1176" y="1307"/>
+        </scene>
+        <!--Settings Rate View Controller - Rate This App-->
+        <scene sceneID="F16-iH-lXy">
+            <objects>
+                <viewController id="X5M-pb-wg0" customClass="BSMSettingsRateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w0Z-QT-iP5"/>
+                        <viewControllerLayoutGuide type="bottom" id="DlP-Fc-zSa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zb4-m9-h4S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqn-A0-YC0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rate This App" id="vcB-zn-owq"/>
+                    <connections>
+                        <outlet property="rateTextView" destination="Qqn-A0-YC0" id="Yfc-bj-zeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQO-zi-5b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721" y="1307"/>
         </scene>
         <!--Table View Controller - Favorite Publication-->
         <scene sceneID="xfR-h8-BwU">
@@ -278,7 +312,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7t-v2-8w4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="1032"/>
+            <point key="canvasLocation" x="1721" y="640"/>
         </scene>
         <!--Settings About View Controller - About-->
         <scene sceneID="lj8-3G-8kX">
@@ -309,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuZ-vW-g73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="1740"/>
+            <point key="canvasLocation" x="1721" y="2044"/>
         </scene>
     </scenes>
     <resources>

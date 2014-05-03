@@ -29,8 +29,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // NSDictionary *attributes = [NSDictionary dictionaryWithObject:[UIFont preferredFontForTextStyle:UIFontTextStyleBody] forKey:NSFontAttributeName]
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithFileURL:[[NSBundle mainBundle] URLForResource:@"Acknowledgements" withExtension:@"rtf"] options:nil documentAttributes:nil error:NULL];
-    _aboutTextView.attributedText = attributedString;
+    NSRange fullRange = NSMakeRange(0, attributedString.length);
+    NSMutableAttributedString *newAttributedString = [attributedString mutableCopy];
+    [newAttributedString addAttribute:NSFontAttributeName value:[UIFont preferredFontForTextStyle:UIFontTextStyleBody] range:fullRange];
+    _aboutTextView.attributedText = newAttributedString;
 }
 
 - (void)didReceiveMemoryWarning

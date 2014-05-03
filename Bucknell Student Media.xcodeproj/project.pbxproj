@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D82C361C190AC77500049311 /* Acknowledgements.rtf */; };
-		D8AEC9CC190AC494006D5BE2 /* Acknowledgements.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */; };
 		D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */; };
 		D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E019148BB500751628 /* BSMBucknellianViewController.m */; };
 		D8C236E419148BF700751628 /* BSMUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E319148BF700751628 /* BSMUploadViewController.m */; };
 		D8C236E719148C0500751628 /* BSMWVBUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E619148C0500751628 /* BSMWVBUViewController.m */; };
 		D8C236EB19148C6D00751628 /* BSMSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236EA19148C6D00751628 /* BSMSettingsTableViewController.m */; };
+		D8C236EE191492C000751628 /* RateMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D8C236ED191492C000751628 /* RateMe.rtf */; };
+		D8C236F21914942400751628 /* BSMSettingsRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236F11914942400751628 /* BSMSettingsRateViewController.m */; };
 		D8C3D0D0190183F3003D280F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0CF190183F3003D280F /* Foundation.framework */; };
 		D8C3D0D2190183F3003D280F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D1190183F3003D280F /* CoreGraphics.framework */; };
 		D8C3D0D4190183F3003D280F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D3190183F3003D280F /* UIKit.framework */; };
@@ -44,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		D82C361C190AC77500049311 /* Acknowledgements.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Acknowledgements.rtf; sourceTree = "<group>"; };
-		D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Acknowledgements.txt; sourceTree = "<group>"; };
 		D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsAboutViewController.h; sourceTree = "<group>"; };
 		D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsAboutViewController.m; sourceTree = "<group>"; };
 		D8C236DF19148BB500751628 /* BSMBucknellianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMBucknellianViewController.h; sourceTree = "<group>"; };
@@ -55,6 +55,9 @@
 		D8C236E619148C0500751628 /* BSMWVBUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMWVBUViewController.m; sourceTree = "<group>"; };
 		D8C236E919148C6D00751628 /* BSMSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsTableViewController.h; sourceTree = "<group>"; };
 		D8C236EA19148C6D00751628 /* BSMSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsTableViewController.m; sourceTree = "<group>"; };
+		D8C236ED191492C000751628 /* RateMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = RateMe.rtf; sourceTree = "<group>"; };
+		D8C236F01914942400751628 /* BSMSettingsRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsRateViewController.h; sourceTree = "<group>"; };
+		D8C236F11914942400751628 /* BSMSettingsRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsRateViewController.m; sourceTree = "<group>"; };
 		D8C3D0CC190183F3003D280F /* Bucknell Student Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bucknell Student Media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C3D0CF190183F3003D280F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8C3D0D1190183F3003D280F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,8 +126,19 @@
 				D8C236E319148BF700751628 /* BSMUploadViewController.m */,
 				D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */,
 				D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */,
+				D8C236F01914942400751628 /* BSMSettingsRateViewController.h */,
+				D8C236F11914942400751628 /* BSMSettingsRateViewController.m */,
 			);
 			name = Subviews;
+			sourceTree = "<group>";
+		};
+		D8C236EF191492C500751628 /* RTF Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D82C361C190AC77500049311 /* Acknowledgements.rtf */,
+				D8C236ED191492C000751628 /* RateMe.rtf */,
+			);
+			name = "RTF Sources";
 			sourceTree = "<group>";
 		};
 		D8C3D0C3190183F3003D280F = {
@@ -171,8 +185,7 @@
 				D8C3D0EA190183F3003D280F /* BSMSecondViewController.h */,
 				D8C3D0EB190183F3003D280F /* BSMSecondViewController.m */,
 				D8C3D0ED190183F3003D280F /* Images.xcassets */,
-				D8AEC9CB190AC494006D5BE2 /* Acknowledgements.txt */,
-				D82C361C190AC77500049311 /* Acknowledgements.rtf */,
+				D8C236EF191492C500751628 /* RTF Sources */,
 				D8C3D0D6190183F3003D280F /* Supporting Files */,
 			);
 			path = "Bucknell Student Media";
@@ -284,11 +297,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C236EE191492C000751628 /* RateMe.rtf in Resources */,
 				D8C3D0E6190183F3003D280F /* Main_iPad.storyboard in Resources */,
 				D8C3D0EE190183F3003D280F /* Images.xcassets in Resources */,
 				D8C3D0E3190183F3003D280F /* Main_iPhone.storyboard in Resources */,
 				D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */,
-				D8AEC9CC190AC494006D5BE2 /* Acknowledgements.txt in Resources */,
 				D8C3D0DA190183F3003D280F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +329,7 @@
 				D8C3D0E9190183F3003D280F /* BSMFirstViewController.m in Sources */,
 				D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */,
 				D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */,
+				D8C236F21914942400751628 /* BSMSettingsRateViewController.m in Sources */,
 				D8C236E719148C0500751628 /* BSMWVBUViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
