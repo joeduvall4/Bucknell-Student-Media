@@ -90,6 +90,12 @@
                     <view key="view" contentMode="scaleToFill" id="SY3-Rc-1oK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-Hy-9xP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="WVBU" id="j2b-Nt-jxt">
@@ -229,8 +235,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqn-A0-YC0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqn-A0-YC0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText"/>
@@ -238,6 +244,12 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Qqn-A0-YC0" secondAttribute="bottom" id="ABT-jT-1cC"/>
+                            <constraint firstItem="Qqn-A0-YC0" firstAttribute="leading" secondItem="Zb4-m9-h4S" secondAttribute="leading" id="C2i-Ph-sYS"/>
+                            <constraint firstItem="Qqn-A0-YC0" firstAttribute="top" secondItem="Zb4-m9-h4S" secondAttribute="top" id="K4K-hE-Zz6"/>
+                            <constraint firstAttribute="trailing" secondItem="Qqn-A0-YC0" secondAttribute="trailing" id="zfL-na-i18"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rate This App" id="vcB-zn-owq"/>
                     <connections>
@@ -283,15 +295,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="oze-VH-gtI" style="IBUITableViewCellStyleDefault" id="vnc-Wy-hS8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="oze-VH-gtI" style="IBUITableViewCellStyleDefault" id="vnc-Wy-hS8">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vnc-Wy-hS8" id="E6O-95-t2h">
-                                            <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="WVBU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oze-VH-gtI">
-                                                    <rect key="frame" x="15" y="0.0" width="266" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -326,8 +338,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-CN-AQA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-CN-AQA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText"/>
@@ -335,6 +347,12 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lZs-CN-AQA" secondAttribute="trailing" id="BSP-LW-lQ3"/>
+                            <constraint firstAttribute="bottom" secondItem="lZs-CN-AQA" secondAttribute="bottom" id="WMG-VB-5YW"/>
+                            <constraint firstItem="lZs-CN-AQA" firstAttribute="top" secondItem="XUh-2W-QVh" secondAttribute="top" id="dKR-x5-oNe"/>
+                            <constraint firstItem="lZs-CN-AQA" firstAttribute="leading" secondItem="XUh-2W-QVh" secondAttribute="leading" id="f2o-f1-gdQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="h6V-Y7-Ww4"/>
                     <connections>
