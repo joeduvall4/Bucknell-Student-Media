@@ -116,7 +116,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Song]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td5-lu-Ka9">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Song]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="td5-lu-Ka9">
                                 <rect key="frame" x="20" y="414" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -146,6 +146,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="artistLabel" destination="gdm-Jk-VPl" id="4yj-L8-sD2"/>
+                        <outlet property="artworkImageView" destination="cJB-Hy-9xP" id="OGr-p5-RQH"/>
                         <outlet property="songLabel" destination="td5-lu-Ka9" id="OTs-Uw-Nvv"/>
                     </connections>
                 </viewController>

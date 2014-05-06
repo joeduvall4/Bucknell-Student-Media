@@ -8,6 +8,9 @@
 
 #import "BSMWVBUViewController.h"
 #import <AVFoundation/AVPlayer.h>
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
+#import "iTunesClient.h"
 
 static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.txt";
 
@@ -15,6 +18,11 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 
 @property (weak, nonatomic) IBOutlet UILabel *songLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (nonatomic, strong) NSArray *results;
+@property (nonatomic, strong) NSString *currentSong;
+@property (nonatomic, strong) NSString *currentArtist;
+@property (nonatomic, strong) NSDictionary *currentSongInfo;
+@property (weak, nonatomic) IBOutlet UIImageView *artworkImageView;
 
 @end
 
@@ -47,22 +55,50 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 //    NSLog(@"Error: %@", [player error]);
 }
 
+- (void)searchiTunesForSong:(NSString *)song byArtist:(NSString *)artist {
+    NSString *term = [NSString stringWithFormat:@"%@ %@", song, artist];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [[iTunesClient sharedClient] searchForTerm:term
+                                    completion:^(NSArray *results, NSError *error) {
+                                        if (results) {
+                                            self.currentSongInfo = results[0];
+                                            [self updateAlbumArtworkForCurrentSongInfo];
+                                        } else {
+                                            NSLog(@"Error Occurred: %@", error);
+                                        }
+                                    }];
+}
+
+- (void)updateAlbumArtworkForCurrentSongInfo {
+    if (self.currentSongInfo) {
+        NSString *urlString = self.currentSongInfo[@"artworkUrl100"];
+        urlString = [urlString stringByReplacingOccurrencesOfString:@"100x100" withString:@"600x600"];
+        NSURL *imageURL = [NSURL URLWithString:urlString];
+        NSLog(@"URL: %@", imageURL);
+        if (imageURL) {
+            [self.artworkImageView setImageWithURL:imageURL];
+        }
+    }
+}
+
 - (void)updateCurrentlyPlaying {
-    __block NSString *nowPlaying;
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-        nowPlaying = [NSString stringWithContentsOfURL:[NSURL URLWithString:currentSongLocation]
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:nil];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        NSString *nowPlaying = [NSString stringWithContentsOfURL:[NSURL URLWithString:currentSongLocation]
+                                                        encoding:NSUTF8StringEncoding
+                                                           error:nil];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        if ([[nowPlaying substringFromIndex:nowPlaying.length-1] isEqualToString:@"^"])
+            nowPlaying = [nowPlaying substringToIndex:nowPlaying.length-1];
+        NSArray *currentSongAttributes = [nowPlaying componentsSeparatedByString:@"-"];
+        self.currentSong = currentSongAttributes[1];
+        self.currentArtist = currentSongAttributes[0];
+        [self searchiTunesForSong:self.currentSong byArtist:self.currentArtist];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (nowPlaying) {
-                if (nowPlaying.length > 0) {
-                    nowPlaying = [nowPlaying substringToIndex:nowPlaying.length-1];
-                    NSArray *currentSongAttributes = [nowPlaying componentsSeparatedByString:@"-"];
-                    _artistLabel.text = currentSongAttributes[0];
-                    _songLabel.text = currentSongAttributes[1];
-                }
-            }
+            _artistLabel.text = self.currentArtist;
+            _songLabel.text = self.currentSong;
         });
     });
 }

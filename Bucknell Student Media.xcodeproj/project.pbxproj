@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027252ACDDE945F2833952F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9392670E2E42BEB3B510A9 /* libPods.a */; };
 		D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D82C361C190AC77500049311 /* Acknowledgements.rtf */; };
 		D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */; };
 		D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E019148BB500751628 /* BSMBucknellianViewController.m */; };
@@ -34,6 +35,7 @@
 		D8F01BE91918155D00BED79B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F01BE81918155D00BED79B /* AVFoundation.framework */; };
 		D8F01BEB19189F3000BED79B /* Help.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D8F01BEA19189F3000BED79B /* Help.rtf */; };
 		D8F01BEE1918A0EE00BED79B /* BSMSettingsHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F01BED1918A0EE00BED79B /* BSMSettingsHelpViewController.m */; };
+		D8F01C321919450E00BED79B /* iTunesClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F01C311919450E00BED79B /* iTunesClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B9392670E2E42BEB3B510A9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AE7FEA42A24D1DAD8D5C37 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D82C361C190AC77500049311 /* Acknowledgements.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Acknowledgements.rtf; sourceTree = "<group>"; };
 		D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsAboutViewController.h; sourceTree = "<group>"; };
 		D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsAboutViewController.m; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		D8F01BEA19189F3000BED79B /* Help.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Help.rtf; sourceTree = "<group>"; };
 		D8F01BEC1918A0EE00BED79B /* BSMSettingsHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsHelpViewController.h; sourceTree = "<group>"; };
 		D8F01BED1918A0EE00BED79B /* BSMSettingsHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsHelpViewController.m; sourceTree = "<group>"; };
+		D8F01C301919450E00BED79B /* iTunesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesClient.h; sourceTree = "<group>"; };
+		D8F01C311919450E00BED79B /* iTunesClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 				D8C3D0D2190183F3003D280F /* CoreGraphics.framework in Frameworks */,
 				D8C3D0D4190183F3003D280F /* UIKit.framework in Frameworks */,
 				D8C3D0D0190183F3003D280F /* Foundation.framework in Frameworks */,
+				027252ACDDE945F2833952F3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +166,7 @@
 				D8C3D0FA190183F3003D280F /* Bucknell Student MediaTests */,
 				D8C3D0CE190183F3003D280F /* Frameworks */,
 				D8C3D0CD190183F3003D280F /* Products */,
+				D1AE7FEA42A24D1DAD8D5C37 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +187,7 @@
 				D8C3D0D1190183F3003D280F /* CoreGraphics.framework */,
 				D8C3D0D3190183F3003D280F /* UIKit.framework */,
 				D8C3D0F4190183F3003D280F /* XCTest.framework */,
+				0B9392670E2E42BEB3B510A9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,6 +201,8 @@
 				D8C236E819148C1000751628 /* Tabs */,
 				D8C236EC19148C7900751628 /* Subviews */,
 				D8C3D0E4190183F3003D280F /* Main_iPad.storyboard */,
+				D8F01C301919450E00BED79B /* iTunesClient.h */,
+				D8F01C311919450E00BED79B /* iTunesClient.m */,
 				D8C3D0E7190183F3003D280F /* BSMFirstViewController.h */,
 				D8C3D0E8190183F3003D280F /* BSMFirstViewController.m */,
 				D8C3D0EA190183F3003D280F /* BSMSecondViewController.h */,
@@ -239,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8C3D104190183F3003D280F /* Build configuration list for PBXNativeTarget "Bucknell Student Media" */;
 			buildPhases = (
+				C515457A2E01496C902D245E /* Check Pods Manifest.lock */,
 				D8C3D0C8190183F3003D280F /* Sources */,
 				D8C3D0C9190183F3003D280F /* Frameworks */,
 				D8C3D0CA190183F3003D280F /* Resources */,
+				C4FF19F3225348F2A4939BF9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +345,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C4FF19F3225348F2A4939BF9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C515457A2E01496C902D245E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8C3D0C8190183F3003D280F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -345,6 +391,7 @@
 				D8C3D0E9190183F3003D280F /* BSMFirstViewController.m in Sources */,
 				D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */,
 				D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */,
+				D8F01C321919450E00BED79B /* iTunesClient.m in Sources */,
 				D8C236F21914942400751628 /* BSMSettingsRateViewController.m in Sources */,
 				D8F01BEE1918A0EE00BED79B /* BSMSettingsHelpViewController.m in Sources */,
 				D8C236E719148C0500751628 /* BSMWVBUViewController.m in Sources */,
@@ -479,6 +526,7 @@
 		};
 		D8C3D105190183F3003D280F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1AE7FEA42A24D1DAD8D5C37 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -493,6 +541,7 @@
 		};
 		D8C3D106190183F3003D280F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1AE7FEA42A24D1DAD8D5C37 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
