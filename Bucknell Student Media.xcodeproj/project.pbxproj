@@ -31,6 +31,9 @@
 		D8C3D0F7190183F3003D280F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D0D3190183F3003D280F /* UIKit.framework */; };
 		D8C3D0FF190183F3003D280F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D0FD190183F3003D280F /* InfoPlist.strings */; };
 		D8C3D101190183F3003D280F /* Bucknell_Student_MediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3D100190183F3003D280F /* Bucknell_Student_MediaTests.m */; };
+		D8F01BE91918155D00BED79B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F01BE81918155D00BED79B /* AVFoundation.framework */; };
+		D8F01BEB19189F3000BED79B /* Help.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D8F01BEA19189F3000BED79B /* Help.rtf */; };
+		D8F01BEE1918A0EE00BED79B /* BSMSettingsHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F01BED1918A0EE00BED79B /* BSMSettingsHelpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,10 @@
 		D8C3D0FC190183F3003D280F /* Bucknell Student MediaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bucknell Student MediaTests-Info.plist"; sourceTree = "<group>"; };
 		D8C3D0FE190183F3003D280F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8C3D100190183F3003D280F /* Bucknell_Student_MediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bucknell_Student_MediaTests.m; sourceTree = "<group>"; };
+		D8F01BE81918155D00BED79B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D8F01BEA19189F3000BED79B /* Help.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Help.rtf; sourceTree = "<group>"; };
+		D8F01BEC1918A0EE00BED79B /* BSMSettingsHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsHelpViewController.h; sourceTree = "<group>"; };
+		D8F01BED1918A0EE00BED79B /* BSMSettingsHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsHelpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F01BE91918155D00BED79B /* AVFoundation.framework in Frameworks */,
 				D8C3D0D2190183F3003D280F /* CoreGraphics.framework in Frameworks */,
 				D8C3D0D4190183F3003D280F /* UIKit.framework in Frameworks */,
 				D8C3D0D0190183F3003D280F /* Foundation.framework in Frameworks */,
@@ -128,6 +136,8 @@
 				D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */,
 				D8C236F01914942400751628 /* BSMSettingsRateViewController.h */,
 				D8C236F11914942400751628 /* BSMSettingsRateViewController.m */,
+				D8F01BEC1918A0EE00BED79B /* BSMSettingsHelpViewController.h */,
+				D8F01BED1918A0EE00BED79B /* BSMSettingsHelpViewController.m */,
 			);
 			name = Subviews;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 			children = (
 				D82C361C190AC77500049311 /* Acknowledgements.rtf */,
 				D8C236ED191492C000751628 /* RateMe.rtf */,
+				D8F01BEA19189F3000BED79B /* Help.rtf */,
 			);
 			name = "RTF Sources";
 			sourceTree = "<group>";
@@ -163,6 +174,7 @@
 		D8C3D0CE190183F3003D280F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8F01BE81918155D00BED79B /* AVFoundation.framework */,
 				D8C3D0CF190183F3003D280F /* Foundation.framework */,
 				D8C3D0D1190183F3003D280F /* CoreGraphics.framework */,
 				D8C3D0D3190183F3003D280F /* UIKit.framework */,
@@ -306,6 +318,7 @@
 				D8C3D0E3190183F3003D280F /* Main_iPhone.storyboard in Resources */,
 				D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */,
 				D8C3D0DA190183F3003D280F /* InfoPlist.strings in Resources */,
+				D8F01BEB19189F3000BED79B /* Help.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +346,7 @@
 				D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */,
 				D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */,
 				D8C236F21914942400751628 /* BSMSettingsRateViewController.m in Sources */,
+				D8F01BEE1918A0EE00BED79B /* BSMSettingsHelpViewController.m in Sources */,
 				D8C236E719148C0500751628 /* BSMWVBUViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
