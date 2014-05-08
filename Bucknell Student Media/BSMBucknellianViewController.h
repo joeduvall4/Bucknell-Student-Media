@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSMBucknellianViewController : UIViewController
+@interface BSMBucknellianViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
