@@ -7,10 +7,10 @@
 //
 
 #import "BSMWVBUViewController.h"
-#import <AVFoundation/AVPlayer.h>
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 #import "iTunesClient.h"
+#import "WVBUPlayer.h"
 
 static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.txt";
 
@@ -39,7 +39,30 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    if ([[WVBUPlayer sharedPlayer] rate] != 0.0) {
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPause];
+    }
+    else {
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPlay];
+    }
     [self updateCurrentlyPlaying];
+}
+
+- (IBAction)playPausePressed:(id)sender {
+    if ([[WVBUPlayer sharedPlayer] rate] != 0.0) {
+        [[WVBUPlayer sharedPlayer] pause];
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPlay];
+    }
+    else {
+        [[WVBUPlayer sharedPlayer] play];
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPause];
+    }
+}
+
+- (void)setRightBarButtonItemForSystemItem:(UIBarButtonSystemItem)item {
+    UIBarButtonItem *currentItem = self.navigationItem.rightBarButtonItem;
+    UIBarButtonItem *newItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:item target:currentItem.target action:currentItem.action];
+    self.navigationItem.rightBarButtonItem = newItem;
 }
 
 - (void)viewDidLoad
@@ -48,12 +71,6 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
     // Do any additional setup after loading the view.
     [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(updateCurrentlyPlaying) userInfo:nil repeats:YES];
     //[self updateCurrentlyPlaying];
-    
-    
-//    NSURL *streamURL = [NSURL URLWithString:@"http://stream.bucknell.edu:90/wvbu.m3u"];
-//    AVPlayer *player = [AVPlayer playerWithURL:streamURL];
-//    [player play];
-//    NSLog(@"Error: %@", [player error]);
 }
 
 - (void)searchiTunesForSong:(NSString *)song byArtist:(NSString *)artist {

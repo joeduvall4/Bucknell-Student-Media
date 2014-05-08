@@ -10,6 +10,7 @@
 		027252ACDDE945F2833952F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9392670E2E42BEB3B510A9 /* libPods.a */; };
 		D82C361D190AC77500049311 /* Acknowledgements.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D82C361C190AC77500049311 /* Acknowledgements.rtf */; };
 		D8AEC9CF190AC501006D5BE2 /* BSMSettingsAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */; };
+		D8BF3E5C191B4F6B001419B8 /* WVBUPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BF3E5B191B4F6B001419B8 /* WVBUPlayer.m */; };
 		D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E019148BB500751628 /* BSMBucknellianViewController.m */; };
 		D8C236E419148BF700751628 /* BSMUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E319148BF700751628 /* BSMUploadViewController.m */; };
 		D8C236E719148C0500751628 /* BSMWVBUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C236E619148C0500751628 /* BSMWVBUViewController.m */; };
@@ -54,6 +55,8 @@
 		D82C361C190AC77500049311 /* Acknowledgements.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Acknowledgements.rtf; sourceTree = "<group>"; };
 		D8AEC9CD190AC501006D5BE2 /* BSMSettingsAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMSettingsAboutViewController.h; sourceTree = "<group>"; };
 		D8AEC9CE190AC501006D5BE2 /* BSMSettingsAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMSettingsAboutViewController.m; sourceTree = "<group>"; };
+		D8BF3E5A191B4F6B001419B8 /* WVBUPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVBUPlayer.h; sourceTree = "<group>"; };
+		D8BF3E5B191B4F6B001419B8 /* WVBUPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVBUPlayer.m; sourceTree = "<group>"; };
 		D8C236DF19148BB500751628 /* BSMBucknellianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMBucknellianViewController.h; sourceTree = "<group>"; };
 		D8C236E019148BB500751628 /* BSMBucknellianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMBucknellianViewController.m; sourceTree = "<group>"; };
 		D8C236E219148BF700751628 /* BSMUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMUploadViewController.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				D8C3D0E4190183F3003D280F /* Main_iPad.storyboard */,
 				D8F01C301919450E00BED79B /* iTunesClient.h */,
 				D8F01C311919450E00BED79B /* iTunesClient.m */,
+				D8BF3E5A191B4F6B001419B8 /* WVBUPlayer.h */,
+				D8BF3E5B191B4F6B001419B8 /* WVBUPlayer.m */,
 				D8C3D0E7190183F3003D280F /* BSMFirstViewController.h */,
 				D8C3D0E8190183F3003D280F /* BSMFirstViewController.m */,
 				D8C3D0EA190183F3003D280F /* BSMSecondViewController.h */,
@@ -387,6 +392,7 @@
 				D8C3D0DC190183F3003D280F /* main.m in Sources */,
 				D8C236EB19148C6D00751628 /* BSMSettingsTableViewController.m in Sources */,
 				D8C3D0EC190183F3003D280F /* BSMSecondViewController.m in Sources */,
+				D8BF3E5C191B4F6B001419B8 /* WVBUPlayer.m in Sources */,
 				D8C3D0E0190183F3003D280F /* BSMAppDelegate.m in Sources */,
 				D8C3D0E9190183F3003D280F /* BSMFirstViewController.m in Sources */,
 				D8C236E119148BB500751628 /* BSMBucknellianViewController.m in Sources */,

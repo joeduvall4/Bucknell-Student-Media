@@ -7,6 +7,7 @@
 //
 
 #import "BSMBucknellianViewController.h"
+#import "WVBUPlayer.h"
 
 @interface BSMBucknellianViewController ()
 
@@ -21,6 +22,32 @@
         // Custom initialization
     }
     return self;
+}
+
+- (IBAction)playPausePressed:(id)sender {
+    if ([[WVBUPlayer sharedPlayer] rate] != 0.0) {
+        [[WVBUPlayer sharedPlayer] pause];
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPlay];
+    }
+    else {
+        [[WVBUPlayer sharedPlayer] play];
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPause];
+    }
+}
+
+- (void)setRightBarButtonItemForSystemItem:(UIBarButtonSystemItem)item {
+    UIBarButtonItem *currentItem = self.navigationItem.rightBarButtonItem;
+    UIBarButtonItem *newItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:item target:currentItem.target action:currentItem.action];
+    self.navigationItem.rightBarButtonItem = newItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if ([[WVBUPlayer sharedPlayer] rate] != 0.0) {
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPause];
+    }
+    else {
+        [self setRightBarButtonItemForSystemItem:UIBarButtonSystemItemPlay];
+    }
 }
 
 - (void)viewDidLoad
