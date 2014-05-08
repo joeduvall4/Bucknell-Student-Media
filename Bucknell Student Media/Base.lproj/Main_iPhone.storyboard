@@ -130,12 +130,15 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-LJ-eei">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtS-LJ-eei">
                                 <rect key="frame" x="184" y="476" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Buy on iTunes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iTunesButtonPressed:" destination="PKm-6q-Qk7" eventType="touchUpInside" id="qv7-V0-zQ0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -147,6 +150,7 @@
                     <connections>
                         <outlet property="artistLabel" destination="gdm-Jk-VPl" id="4yj-L8-sD2"/>
                         <outlet property="artworkImageView" destination="cJB-Hy-9xP" id="OGr-p5-RQH"/>
+                        <outlet property="iTunesButton" destination="XtS-LJ-eei" id="MVH-lB-OMt"/>
                         <outlet property="songLabel" destination="td5-lu-Ka9" id="OTs-Uw-Nvv"/>
                     </connections>
                 </viewController>

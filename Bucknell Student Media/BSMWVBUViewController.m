@@ -23,6 +23,7 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 @property (nonatomic, strong) NSString *currentArtist;
 @property (nonatomic, strong) NSDictionary *currentSongInfo;
 @property (weak, nonatomic) IBOutlet UIImageView *artworkImageView;
+@property (weak, nonatomic) IBOutlet UIButton *iTunesButton;
 
 @end
 
@@ -45,8 +46,8 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self updateCurrentlyPlaying];
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(updateCurrentlyPlaying) userInfo:nil repeats:YES];
+    //[self updateCurrentlyPlaying];
     
     
 //    NSURL *streamURL = [NSURL URLWithString:@"http://stream.bucknell.edu:90/wvbu.m3u"];
@@ -61,16 +62,27 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
     [[iTunesClient sharedClient] searchForTerm:term
                                     completion:^(NSArray *results, NSError *error) {
                                         if (results) {
-                                            self.currentSongInfo = results[0];
-                                            [self updateAlbumArtworkForCurrentSongInfo];
+                                            if (results.count > 0) {
+                                                self.currentSongInfo = results[0];
+                                                [self updateAlbumArtworkForCurrentSongInfo];
+                                            }
+                                            else {
+                                                NSLog(@"Error with array.");
+                                            }
                                         } else {
                                             NSLog(@"Error Occurred: %@", error);
                                         }
                                     }];
 }
 
+- (IBAction)iTunesButtonPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.currentSongInfo[@"trackViewUrl"]]];
+}
+
 - (void)updateAlbumArtworkForCurrentSongInfo {
     if (self.currentSongInfo) {
+        self.artworkImageView.image = nil;
+        [self.artworkImageView cancelImageRequestOperation];
         NSString *urlString = self.currentSongInfo[@"artworkUrl100"];
         urlString = [urlString stringByReplacingOccurrencesOfString:@"100x100" withString:@"600x600"];
         NSURL *imageURL = [NSURL URLWithString:urlString];
@@ -78,10 +90,12 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
         if (imageURL) {
             [self.artworkImageView setImageWithURL:imageURL];
         }
+        [self.iTunesButton setEnabled:YES];
     }
 }
 
 - (void)updateCurrentlyPlaying {
+    NSLog(@"Updating Currently Playing...");
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
