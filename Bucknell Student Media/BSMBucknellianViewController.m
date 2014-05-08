@@ -9,11 +9,13 @@
 #import "BSMBucknellianViewController.h"
 #import "WVBUPlayer.h"
 #import "Post.h"
+#import "BSMBucknellianDetailViewController.h"
 
 @interface BSMBucknellianViewController ()
 
 @property (nonatomic, strong) NSMutableArray *posts;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *contentLoadingIndicator;
 
 @end
 
@@ -68,6 +70,7 @@
 }
 
 - (void)fetchPosts {
+    [self.contentLoadingIndicator startAnimating];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     NSURL *postsURL = [NSURL URLWithString:@"http://bucknellian.net/?json=get_recent_posts&count=50&dev=1"];
@@ -76,11 +79,19 @@
         if (httpResponse.statusCode == 200) {
             [self parsePostJSONData:data];
         } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to connect to the Bucknellian server." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alertView show];
             NSLog(@"Error Occurred: %@", error);
         }
             }];
     [task resume];
 }
+
+//- (void)checkMostRecentPost {
+//    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+//    NSURL *postsURL = [NSURL URLWithString:@"http://bucknellian.net/?json=get_recent_posts&count=1&dev=1"];
+//}
 
 - (void)parsePostJSONData:(NSData *)data {
     NSDictionary *postsJSONDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
@@ -93,15 +104,25 @@
         NSError *error;
         Post *post = [MTLJSONAdapter modelOfClass:[Post class] fromJSONDictionary:postJSON error:&error];
         if (post) {
-            NSLog(@"Post: %@", post);
+            //NSLog(@"Post: %@", post);
+            post.title = [self fixInvalidCharactersInString:post.title];
+            post.titlePlain = [self fixInvalidCharactersInString:post.titlePlain];
+            post.content = [self fixInvalidCharactersInString:post.content];
             [self.posts addObject:post];
         } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error occurred while parsing Bucknellian content." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alertView show];
             NSLog(@"ERROR: %@", error);
         }
     }
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
+        [self.contentLoadingIndicator stopAnimating];
     });
+}
+
+- (NSString *)fixInvalidCharactersInString:(NSString *)string {
+    return [string stringByReplacingOccurrencesOfString:@"&#8211;" withString:@"–"];
 }
 
 #pragma mark - TableView Required Methods
@@ -120,15 +141,24 @@
     Post *post = self.posts[indexPath.row];
     cell.textLabel.text = post.title;
     cell.detailTextLabel.text = post.excerpt;
-    cell.textLabel.numberOfLines = 3;
-//    UIFont *myFont = cell.textLabel.font;
-//    [myFont fontWithSize:(44.0 + (cell.textLabel.numberOfLines - 1) * 19.0)];
-//    [cell.textLabel setFont:myFont];
+    cell.textLabel.numberOfLines = 2;
+    UIFont *myFont = cell.textLabel.font;
+    [myFont fontWithSize:10.0];
+    [cell.textLabel setFont:myFont];
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return NO;
+}
+
+#pragma mark - TableView Optional Methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BSMBucknellianDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
+    detailViewController.currentPost = self.posts[indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 /*

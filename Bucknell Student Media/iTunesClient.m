@@ -33,7 +33,7 @@ static NSUInteger cacheDiskCapacity = 50 * 1024 * 1024;
                                                               diskPath:nil];
         
         [config setURLCache:cache];
-        NSLog(@"baseURL: %@", baseURL);
+        //NSLog(@"baseURL: %@", baseURL);
         _sharedClient = [[iTunesClient alloc] initWithBaseURL:baseURL
                                          sessionConfiguration:config];
         _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];

@@ -24,6 +24,7 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 @property (nonatomic, strong) NSDictionary *currentSongInfo;
 @property (weak, nonatomic) IBOutlet UIImageView *artworkImageView;
 @property (weak, nonatomic) IBOutlet UIButton *iTunesButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *albumArtLoadingIndicator;
 
 @end
 
@@ -76,17 +77,21 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 - (void)searchiTunesForSong:(NSString *)song byArtist:(NSString *)artist {
     NSString *term = [NSString stringWithFormat:@"%@ %@", song, artist];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self.albumArtLoadingIndicator startAnimating];
     [[iTunesClient sharedClient] searchForTerm:term
                                     completion:^(NSArray *results, NSError *error) {
+                                        [self.albumArtLoadingIndicator stopAnimating];
                                         if (results) {
                                             if (results.count > 0) {
                                                 self.currentSongInfo = results[0];
                                                 [self updateAlbumArtworkForCurrentSongInfo];
                                             }
                                             else {
-                                                NSLog(@"Error with array.");
+                                                self.artworkImageView.image = [UIImage imageNamed:@"artworkGeneric"];
+                                                NSLog(@"Unable to find a suitable match on iTunes for the current track.");
                                             }
                                         } else {
+                                            self.artworkImageView.image = [UIImage imageNamed:@"artworkGeneric"];
                                             NSLog(@"Error Occurred: %@", error);
                                         }
                                     }];
@@ -98,12 +103,12 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 
 - (void)updateAlbumArtworkForCurrentSongInfo {
     if (self.currentSongInfo) {
-        self.artworkImageView.image = nil;
+        //self.artworkImageView.image = nil;
         [self.artworkImageView cancelImageRequestOperation];
         NSString *urlString = self.currentSongInfo[@"artworkUrl100"];
         urlString = [urlString stringByReplacingOccurrencesOfString:@"100x100" withString:@"600x600"];
         NSURL *imageURL = [NSURL URLWithString:urlString];
-        NSLog(@"URL: %@", imageURL);
+        //NSLog(@"URL: %@", imageURL);
         if (imageURL) {
             [self.artworkImageView setImageWithURL:imageURL];
         }
@@ -112,25 +117,32 @@ static NSString *currentSongLocation = @"http://eg.bucknell.edu/~wvbu/current.tx
 }
 
 - (void)updateCurrentlyPlaying {
-    NSLog(@"Updating Currently Playing...");
+    //NSLog(@"Updating Currently Playing...");
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        NSError *error;
         NSString *nowPlaying = [NSString stringWithContentsOfURL:[NSURL URLWithString:currentSongLocation]
                                                         encoding:NSUTF8StringEncoding
-                                                           error:nil];
+                                                           error:&error];
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        if ([[nowPlaying substringFromIndex:nowPlaying.length-1] isEqualToString:@"^"])
-            nowPlaying = [nowPlaying substringToIndex:nowPlaying.length-1];
-        NSArray *currentSongAttributes = [nowPlaying componentsSeparatedByString:@"-"];
-        self.currentSong = currentSongAttributes[1];
-        self.currentArtist = currentSongAttributes[0];
-        [self searchiTunesForSong:self.currentSong byArtist:self.currentArtist];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            _artistLabel.text = self.currentArtist;
-            _songLabel.text = self.currentSong;
-        });
+        if (error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to update current song." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alertView show];
+        }
+        else {
+            if ([[nowPlaying substringFromIndex:nowPlaying.length-1] isEqualToString:@"^"])
+                nowPlaying = [nowPlaying substringToIndex:nowPlaying.length-1];
+            NSArray *currentSongAttributes = [nowPlaying componentsSeparatedByString:@"-"];
+            self.currentSong = currentSongAttributes[1];
+            self.currentArtist = currentSongAttributes[0];
+            [self searchiTunesForSong:self.currentSong byArtist:self.currentArtist];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _artistLabel.text = self.currentArtist;
+                _songLabel.text = self.currentSong;
+            });
+        }
     });
 }
 
